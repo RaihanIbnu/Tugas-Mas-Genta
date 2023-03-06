@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "login": "cypress run --headed --browser chrome --spec cypress/e2e/demoblaze/login-test.cy.js",
-    "addcart": "cypress run --headed --browser chrome --spec cypress/e2e/demoblaze/addcart-test.cy.js",
-    "logout": "cypress run --headed --browser chrome --spec cypress/e2e/demoblaze/logout-test.cy.js",
+    "login": "cypress run --browser chrome --spec cypress/e2e/demoblaze/login-test.cy.js",
+    "addcart": "cypress run --browser chrome --spec cypress/e2e/demoblaze/addcart-test.cy.js",
+    "logout": "cypress run --browser chrome --spec cypress/e2e/demoblaze/logout-test.cy.js",
     "open": "cypress open"
   },
   "keywords": [],

@@ -17,15 +17,12 @@ describe("Demoblaze app logout scenario", ()=>{
         // assert homepage
         cy.get('#nameofuser').should('contain','wibowo.bullseye')
 
-        // logut
-        cy.get("[data-target='#logOutModal']").click()
+        // click logut button
         cy.get("[onclick='logOut()']").should('be.visible')
         cy.wait(1000)
 
-        // click login button
-        cy.get("[data-target='#logOutModal']").click()
-        cy.get("[onclick='logOut()']").should('be.visible')
-        cy.wait(1000)
+        // assert homepage
+        cy.get('#narvbarx').should('be.visible')
 
     })
 })
