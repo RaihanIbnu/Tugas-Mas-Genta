@@ -26,7 +26,7 @@ describe("Demoblaze app addcart scenario", ()=>{
         // place an order
         cy.get('.btn-success').click()
 
-        // input item
+        // input detail
         cy.get('#name').type('Raihan').should('have.value', 'Raihan')
         cy.get('#country').type('Indonesia').should('have.value', 'Indonesia')
         cy.get('#city').type('Tangerang Selatan').should('have.value', 'Tangerang Selatan')
