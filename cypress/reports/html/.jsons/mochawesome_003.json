@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-11T04:20:23.357Z",
+    "end": "2023-03-11T04:20:27.995Z",
+    "duration": 4638,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b2e7c2de-eabd-4f93-ab5d-bf4020a365d0",
+      "title": "",
+      "fullFile": "cypress/e2e/store-demoblaze/store.feature",
+      "file": "cypress/e2e/store-demoblaze/store.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "925f2be3-08a1-4b20-9da5-3b4ad5a89eab",
+          "title": "demoblaze store transaction",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ali wants to buy samsung galaxy phone S6, but he want consider another in another e-commerce, so he want to just save the goods to the cart",
+              "fullTitle": "demoblaze store transaction Ali wants to buy samsung galaxy phone S6, but he want consider another in another e-commerce, so he want to just save the goods to the cart",
+              "timedOut": null,
+              "duration": 3007,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/store.feature/demoblaze store transaction -- Ali wants to buy samsung galaxy phone S6, but he want consider another in another e-commerce, so he want to just save the goods to the cart (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "var _a2, _b, _c, _d, _e;\nconst { remainingSteps, testCaseStartedId } = retrieveInternalSpecProperties();\n(0, registry_1.assignRegistry)(registry2);\nmessages.stack.push({\n  testCaseStarted: {\n    id: testCaseStartedId,\n    testCaseId,\n    attempt: attempt++,\n    timestamp: (0, messages_helpers_1.createTimestamp)()\n  }\n});\nflushMessages(context.messages);\nwindow.testState = {\n  gherkinDocument,\n  pickles,\n  pickle\n};\nfor (const step of steps) {\n  if (step.hook) {\n    const hook = step.hook;\n    cy.then(() => {\n      delete window.testState.pickleStep;\n      const start = (0, messages_helpers_1.createTimestamp)();\n      messages.stack.push({\n        testStepStarted: {\n          testStepId: hook.id,\n          testCaseStartedId,\n          timestamp: start\n        }\n      });\n      if (messages.enabled) {\n        cy.task(constants_1.TASK_TEST_STEP_STARTED, hook.id, { log: false });\n      }\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      (0, cypress_1.runStepWithLogGroup)({\n        fn: () => registry2.runHook(this, hook),\n        keyword: hook.keyword\n      });\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      const end = (0, messages_helpers_1.createTimestamp)();\n      messages.stack.push({\n        testStepFinished: {\n          testStepId: hook.id,\n          testCaseStartedId,\n          testStepResult: {\n            status: Status.Passed,\n            duration: (0, messages_helpers_1.duration)(start, end)\n          },\n          timestamp: end\n        }\n      });\n      remainingSteps.shift();\n    });\n  } else if (step.pickleStep) {\n    const pickleStep = step.pickleStep;\n    const text = (0, assertions_1.assertAndReturn)(pickleStep.text, \"Expected pickle step to have a text\");\n    const scenarioStep = (0, assertions_1.assertAndReturn)(astIdMap.get((0, assertions_1.assertAndReturn)((_a2 = pickleStep.astNodeIds) === null || _a2 === void 0 ? void 0 : _a2[0], \"Expected to find at least one astNodeId\")), `Expected to find scenario step associated with id = ${(_b = pickleStep.astNodeIds) === null || _b === void 0 ? void 0 : _b[0]}`);\n    const argument = ((_c = pickleStep.argument) === null || _c === void 0 ? void 0 : _c.dataTable) ? new data_table_1.default(pickleStep.argument.dataTable) : ((_e = (_d = pickleStep.argument) === null || _d === void 0 ? void 0 : _d.docString) === null || _e === void 0 ? void 0 : _e.content) ? pickleStep.argument.docString.content : void 0;\n    cy.then(() => {\n      window.testState.pickleStep = step.pickleStep;\n      internalProperties.currentStep = { pickleStep };\n      const start = (0, messages_helpers_1.createTimestamp)();\n      messages.stack.push({\n        testStepStarted: {\n          testStepId: pickleStep.id,\n          testCaseStartedId,\n          timestamp: start\n        }\n      });\n      if (messages.enabled) {\n        cy.task(constants_1.TASK_TEST_STEP_STARTED, pickleStep.id, { log: false });\n      }\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      try {\n        return (0, cypress_1.runStepWithLogGroup)({\n          keyword: (0, assertions_1.assertAndReturn)(\"keyword\" in scenarioStep && scenarioStep.keyword, \"Expected to find a keyword in the scenario step\"),\n          text,\n          fn: () => registry2.runStepDefininition(this, text, argument)\n        }).then((result) => {\n          return {\n            start,\n            result\n          };\n        });\n      } catch (e) {\n        if (e instanceof registry_1.MissingDefinitionError) {\n          throw new Error(createMissingStepDefinitionMessage(context, pickleStep, context.registry.parameterTypeRegistry));\n        } else {\n          throw e;\n        }\n      }\n    }).then(({ start, result }) => {\n      var _a3, _b2, _c2;\n      const end = (0, messages_helpers_1.createTimestamp)();\n      if (result === \"pending\") {\n        messages.stack.push({\n          testStepFinished: {\n            testStepId: pickleStep.id,\n            testCaseStartedId,\n            testStepResult: {\n              status: Status.Pending,\n              duration: (0, messages_helpers_1.duration)(start, end)\n            },\n            timestamp: end\n          }\n        });\n        remainingSteps.shift();\n        for (const skippedStep of remainingSteps) {\n          const testStepId = (0, assertions_1.assertAndReturn)((_b2 = (_a3 = skippedStep.hook) === null || _a3 === void 0 ? void 0 : _a3.id) !== null && _b2 !== void 0 ? _b2 : (_c2 = skippedStep.pickleStep) === null || _c2 === void 0 ? void 0 : _c2.id, \"Expected a step to either be a hook or a pickleStep\");\n          messages.stack.push({\n            testStepStarted: {\n              testStepId,\n              testCaseStartedId,\n              timestamp: (0, messages_helpers_1.createTimestamp)()\n            }\n          });\n          messages.stack.push({\n            testStepFinished: {\n              testStepId,\n              testCaseStartedId,\n              testStepResult: {\n                status: Status.Skipped,\n                duration: {\n                  seconds: 0,\n                  nanos: 0\n                }\n              },\n              timestamp: (0, messages_helpers_1.createTimestamp)()\n            }\n          });\n        }\n        for (let i = 0, count = remainingSteps.length; i < count; i++) {\n          remainingSteps.pop();\n        }\n        this.skip();\n      } else {\n        messages.stack.push({\n          testStepFinished: {\n            testStepId: pickleStep.id,\n            testCaseStartedId,\n            testStepResult: {\n              status: Status.Passed,\n              duration: (0, messages_helpers_1.duration)(start, end)\n            },\n            timestamp: end\n          }\n        });\n        remainingSteps.shift();\n      }\n    });\n  }\n}",
+              "err": {
+                "message": "Error: Syntax error, unrecognized expression: a[.='Samsung galaxy s6']",
+                "estack": "Error: Syntax error, unrecognized expression: a[.='Samsung galaxy s6']\n    at Sizzle.error (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:88918:8)\n    at Sizzle.tokenize (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:89570:11)\n    at Sizzle.select (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:89997:20)\n    at Function.Sizzle [as find] (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:88222:9)\n    at jQuery.fn.init.find (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:90253:11)\n    at new jQuery.fn.init (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:90368:40)\n    at Object.query (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:162034:10)\n    at $Cy.$$ (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:142595:65)\n    at <unknown> (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:139021:18)\n    at Object.subjectFn (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:149851:16)\n    at $Cy.verifyUpcomingAssertions (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:131091:31)\n    at onRetry (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:149842:15)\n    at retryQuery (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:149855:10)\n    at <unknown> (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:150005:17)\n    at tryCatcher (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:8914:23)\n    at Promise._settlePromiseFromHandler (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:6849:31)\n    at Promise._settlePromise (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:6906:18)\n    at Promise._settlePromiseCtx (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:6943:10)\n    at _drainQueueStep (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:3625:12)\n    at _drainQueue (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:3614:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:3630:5)\n    at Async.drainQueues (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:3500:14)",
+                "diff": null
+              },
+              "uuid": "84020102-c7e5-4cf5-b23c-ef11623d5bc8",
+              "parentUUID": "925f2be3-08a1-4b20-9da5-3b4ad5a89eab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "84020102-c7e5-4cf5-b23c-ef11623d5bc8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3007,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "embeddedVideos": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

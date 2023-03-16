@@ -1,0 +1,96 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-15T08:59:32.115Z",
+    "end": "2023-03-15T08:59:32.428Z",
+    "duration": 313,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3c906546-eb77-44d3-be27-ed8e8a71371d",
+      "title": "",
+      "fullFile": "cypress/e2e/store-demoblaze/store.feature",
+      "file": "cypress/e2e/store-demoblaze/store.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 300,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/store.feature/An uncaught error was detected outside of a test (failed).png\"\n      }\n    ]\n  ]\n}",
+          "code": "throw err;",
+          "err": {
+            "message": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > productDetailPage is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > productDetailPage is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at cypress/e2e/store-demoblaze/page-object/productDetailPage.js (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:10729:28)\n    at __require (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:12:52)\n    at cypress/e2e/store-demoblaze/store.js (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:10740:42)\n    at __init (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:9:58)\n    at eval (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:10767:7)\n    at withRegistry2 (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:9268:9)\n    at eval (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:10764:18)\n    at eval (http://localhost:52258/__cypress/tests?p=cypress/e2e/store-demoblaze/store.feature:10780:3)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "1424fc3c-6b99-45af-b058-4559ffc161e8",
+          "parentUUID": "3c906546-eb77-44d3-be27-ed8e8a71371d",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "1424fc3c-6b99-45af-b058-4559ffc161e8"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 300,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "embeddedVideos": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
